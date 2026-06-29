@@ -27,26 +27,34 @@ This places the skill in your agent's skills directory (in Claude Code,
 `~/.claude/skills/on-fire/`). The skill then auto-triggers on phrases like
 "fire / emergency backup".
 
-### Slash command (Claude Code, optional)
+### Claude Code plugin marketplace
 
-skills.sh distributes the skill; if you also want the `/on-fire` slash command:
+This repo is also a single-plugin Claude Code marketplace. Inside Claude Code:
+
+```
+# 1. Add the marketplace (the GitHub repo)
+/plugin marketplace add gercektasarim/on-fire
+
+# 2. Install the plugin (plugin-name@marketplace-name)
+/plugin install on-fire@gercektasarim-plugins
+```
+
+Installing the plugin gives you both the `on-fire` skill (auto-triggers) and the
+slash command. Note: plugin commands are namespaced, so the command becomes
+`/on-fire:on-fire`. Update the marketplace later with `/plugin marketplace update`.
+
+If you don't want the whole plugin and only need the slash command standalone:
 
 ```bash
 mkdir -p ~/.claude/commands
-cp commands/on-fire.md ~/.claude/commands/on-fire.md
-```
-
-or via the plugin marketplace:
-
-```bash
-/plugin marketplace add gercektasarim/on-fire
+cp commands/on-fire.md ~/.claude/commands/on-fire.md   # invokes as plain /on-fire
 ```
 
 ## Configuration
 
 ```bash
 mkdir -p ~/.config/on-fire
-cp config.example.json ~/.config/on-fire/config.json
+cp skills/on-fire/config.example.json ~/.config/on-fire/config.json
 # edit: backup_dirs, project_roots, rclone_remote / drive_folder, block_on_secrets
 ```
 

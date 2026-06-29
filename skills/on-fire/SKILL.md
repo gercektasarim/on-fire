@@ -52,7 +52,7 @@ skill is installed; two common paths:
 python3 ~/.claude/skills/on-fire/scripts/on_fire.py
 
 # Installed as a plugin
-python3 "${CLAUDE_PLUGIN_ROOT}/scripts/on_fire.py"
+python3 "${CLAUDE_PLUGIN_ROOT}/skills/on-fire/scripts/on_fire.py"
 ```
 
 If unsure, locate `scripts/on_fire.py` next to this SKILL.md and run that.

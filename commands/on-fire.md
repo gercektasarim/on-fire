@@ -9,7 +9,7 @@ the environment so the user can leave. Don't ask for lengthy confirmation — gi
 at most one line of info and run the script below IMMEDIATELY.
 
 Try these script locations in order (use the first that exists):
-1. `${CLAUDE_PLUGIN_ROOT}/scripts/on_fire.py`
+1. `${CLAUDE_PLUGIN_ROOT}/skills/on-fire/scripts/on_fire.py`
 2. `~/.claude/skills/on-fire/scripts/on_fire.py`
 
 Run:
