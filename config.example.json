@@ -1,0 +1,13 @@
+{
+  "backup_dirs": ["~/Desktop", "~/Documents"],
+  "project_roots": ["~/projects", "~/code", "~/dev", "~/src", "~/repos"],
+  "rclone_remote": "",
+  "drive_folder": "",
+  "drive_subdir": "on-fire-backup",
+  "branch_prefix": "on-fire",
+  "commit_message": "on-fire: emergency backup snapshot",
+  "exclude_dirs": ["node_modules", ".cache", "venv", ".venv", "__pycache__", ".git", "dist", "build", ".next", "target"],
+  "warn_secret_patterns": [".env", ".env.*", "*.pem", "*.key", "id_rsa", "*credential*", "*secret*", "*.pfx", "*.p12"],
+  "block_on_secrets": false,
+  "scan_max_depth": 4
+}
